@@ -8,7 +8,7 @@
     "serve": "node dist/server.js",
     "build": "babel src --out-dir dist",
     "babel-node": "babel-node src/server.js",
-    "lint": "standard src/**.js"
+    "lint": "standard src/**/*.js"
   },
   "dependencies": {
     "bluebird": "^3.5.3",
