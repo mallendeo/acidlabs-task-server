@@ -11,7 +11,10 @@
     "lint": "standard src/**.js"
   },
   "dependencies": {
+    "bluebird": "^3.5.3",
+    "dark-sky": "^1.1.5",
     "dotenv": "^6.2.0",
+    "pino": "^5.10.1",
     "redis": "^2.8.0",
     "socket.io": "^2.2.0"
   },
