@@ -13,6 +13,7 @@ export default {
   port: PORT,
   coordinates: COORDS,
   failureProb: 0.1,
+  interval: 10 * 60 * 1000,
   env: NODE_ENV,
   services: {
     darksky: {

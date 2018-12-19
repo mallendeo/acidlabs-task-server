@@ -21,7 +21,7 @@ const run = async () => {
   setInterval(async () => {
     const forecast = await getForecast()
     io.emit('forecast', forecast)
-  }, 10000)
+  }, config.interval)
 
   io.on('connection', async socket => {
     socket.emit('forecast', await getForecast())
