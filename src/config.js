@@ -6,15 +6,17 @@ dotenv.config()
 const {
   PORT = 3001,
   DARKSKY_API_KEY,
-  NODE_ENV
+  NODE_ENV,
+  REDIS_URL
 } = process.env
 
 export default {
-  port: PORT,
-  coordinates: COORDS,
   failureProb: 0.1,
-  interval: 10 * 60 * 1000,
+  interval: 10 * 60 * 1000, // in ms
+  port: PORT,
   env: NODE_ENV,
+  redisURL: REDIS_URL,
+  coordinates: COORDS,
   services: {
     darksky: {
       key: DARKSKY_API_KEY
