@@ -31,11 +31,11 @@ export const retryUntil = async (promise, retries = Infinity, onError) => {
         onError(err)
       }
 
-      retry(num + 1)
+      return retry(num + 1)
     }
   }
 
-  retry()
+  return retry()
 }
 
 /**
