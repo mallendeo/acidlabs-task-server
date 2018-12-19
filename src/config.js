@@ -4,7 +4,7 @@ import { COORDS } from './fixtures'
 dotenv.config()
 
 const {
-  PORT = 3001,
+  PORT = 3000,
   DARKSKY_API_KEY,
   NODE_ENV,
   REDIS_URL
