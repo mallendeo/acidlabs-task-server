@@ -1,5 +1,7 @@
 # Acid Labs Task (Server)
 
+[React client repository - acidlabs-task-client](https://github.com/mallendeo/acidlabs-task-client)
+
 ### Requirements
 
 - Docker
