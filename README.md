@@ -60,10 +60,6 @@ Create a new app, then add a git remote using:
 APP_NAME=acidlabs-api-test
 
 $ heroku create $APP_NAME
-
-Creating app... done, ⬢ acidlabs-api-test
-https://acidlabs-api-test.herokuapp.com/ | https://git.heroku.com/acidlabs-api-test.git
-
 $ heroku git:remote -a $APP_NAME
 ```
 
