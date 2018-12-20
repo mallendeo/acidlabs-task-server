@@ -12,7 +12,7 @@ const {
 
 export default {
   failureProb: 0.1,
-  interval: 10 * 60 * 1000, // in ms
+  interval: 10000, // in ms
   port: PORT,
   env: NODE_ENV,
   redisURL: REDIS_URL,

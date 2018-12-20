@@ -1,5 +1,11 @@
 # Acid Labs Task (Server)
 
+### Requirements
+
+- Docker
+- Node 11
+- Heroku CLI
+
 ### Clone & Install
 
 ```bash
