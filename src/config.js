@@ -7,12 +7,13 @@ const {
   PORT = 3000,
   DARKSKY_API_KEY,
   NODE_ENV,
-  REDIS_URL
+  REDIS_URL,
+  REQ_INTERVAL
 } = process.env
 
 export default {
   failureProb: 0.1,
-  interval: 10000, // in ms
+  interval: REQ_INTERVAL ? Number(REQ_INTERVAL) : 10000, // in ms
   port: PORT,
   env: NODE_ENV,
   redisURL: REDIS_URL,
