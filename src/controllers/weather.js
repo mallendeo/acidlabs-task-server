@@ -33,7 +33,8 @@ export const getCityForecast = async city => {
     .options({
       latitude: city.coords[0],
       longitude: city.coords[1],
-      language: 'es'
+      language: 'es',
+      units: 'ca'
     })
     .get()
 
