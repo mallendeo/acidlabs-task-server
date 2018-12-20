@@ -38,10 +38,20 @@ export const getCityForecast = async city => {
     })
     .get()
 
+  const now = new Date(forecast.currently.time * 1000)
+  const utc = now.getTime() + (now.getTimezoneOffset() * 60000)
+
+  // create new Date object for different city
+  // using supplied offset
+  const date = new Date(utc + (3600000 * forecast.offset))
+  const hour = String(date.getHours()).padStart(2, '0')
+  const min = String(date.getMinutes()).padStart(2, '0')
+
   const payload = {
     ...city,
     forecast: forecast.currently,
-    tz: forecast.timezone
+    tz: forecast.timezone,
+    currTime: `${hour}:${min}`
   }
 
   if (!isProd) {
