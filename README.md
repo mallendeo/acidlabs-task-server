@@ -49,12 +49,14 @@ $ heroku login
 Create a new app, then add a git remote using:
 
 ```bash
-$ heroku create
+APP_NAME=acidlabs-api-test
 
-Creating app... done, ⬢ your-app-name
-https://your-app-name.herokuapp.com/ | https://git.heroku.com/your-app-name.git
+$ heroku create $APP_NAME
 
-$ heroku git:remote -a your-app-name
+Creating app... done, ⬢ acidlabs-api-test
+https://acidlabs-api-test.herokuapp.com/ | https://git.heroku.com/acidlabs-api-test.git
+
+$ heroku git:remote -a $APP_NAME
 ```
 
 Set the `DARKSKY_API_KEY` variable:
@@ -64,16 +66,16 @@ $ heroku config:set DARKSKY_API_KEY="your_api_key"
 
 Add a new `redis` instance:
 ```bash
-$ heroku addons:create heroku-redis:hobby-dev -a your-app-name
+$ heroku addons:create heroku-redis:hobby-dev -a $APP_NAME
 ```
 
-It will overwrite the `REDIS_URL` environment variable on the app.
+It will automatically overwrite the `REDIS_URL` environment variable.
 
 Finally, push the repo to Heroku's remote:
 ```bash
 $ git push heroku master
 ```
 
-The websocket server should be running on https://your-app-name.herokuapp.com/
+The websocket server should be running on https://acidlabs-api-test.herokuapp.com/
 
 > Note that it will throw a 404 error since it's only a ws server
